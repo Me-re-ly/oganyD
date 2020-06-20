@@ -344,10 +344,10 @@ namespace Dynago.Forms {
                     foreach (string err in errors)
                         txtLog.Log(err, Color.Red);
                     // upload sourcefinal + error log to server???
-                    string result = Networking.ShareUpload("error", sourceFinal + Environment.NewLine + txtLog.Text);
-                    if (string.IsNullOrEmpty(result)) result = "[FAILED]";
+                    string result = string.Empty;
+                    if (string.IsNullOrEmpty(result)) result = "Shit is scuffed.";
                     txtLog.Log("Error log ID: " + result, Color.Yellow);
-                    txtLog.Log("[Please give that to justin ^^^]", Color.Green);
+                    txtLog.Log("[Please give that to Me-re-ly]", Color.Green);
                     MessageBox.Show("Build failed!\nWe found some errors :(", "Dynago", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }).Start();

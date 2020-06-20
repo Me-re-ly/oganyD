@@ -543,91 +543,23 @@ public class WeaponSettings {
 static class Sharing {
 
     public static void UploadValues(TextBox txt) {
-        string uploadData = string.Empty;
-        List<Offset> offsets = OffsetList.List;
-        List<Bone> bones = BoneList.List;
-        foreach (Offset offset in offsets)
-            if (offset.GetValue() > 0)
-                uploadData += "public const Int32 " + offset.GetName() + " = 0x" + offset.GetValue().ToString("X") + ";\n";
-        foreach (Bone bone in bones)
-            if (bone.GetValue() > 0)
-                uploadData += bone.GetName() + "=\"" + bone.GetValue() + "\"\n";
-        string result = Networking.ShareUpload("values", uploadData);
-        if (string.IsNullOrEmpty(result)) {
-            txt.Text = "ERROR";
-            MessageBox.Show("An error has occurred while uploading your values.", "Dynago", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            return;
-        }
-        txt.Text = result;
-        bool copied = false;
-        try {
-            Clipboard.SetText(result);
-            copied = true;
-        } catch (Exception) { }
-        string successText = "Values uploaded successfully.\nGenerated ID: " + result;
-        if (copied) successText += "\nID copied to clipboard.";
-        MessageBox.Show(successText, "Dynago", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        MessageBox.Show("Uploading values has been disabled.", "Dynago", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        return;
     }
 
     public static void DownloadValues(TextBox txt, Action update) {
-        string id = txt.Text;
-        if (id.Length != 8) {
-            MessageBox.Show("Invalid ID detected.\nPlease ensure your ID is correct and try again.", "Dynago", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            return;
-        }
-        string result = Networking.ShareDownload("values", id);
-        if (string.IsNullOrEmpty(result)) {
-            MessageBox.Show("An error has occurred.\nUnable to download values from ID: " + id + "\nPlease ensure your ID is correct and try again.", "Dynago", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            return;
-        }
-        int validOffsets = 0, validBones = 0;
-        OffsetList.ParseOffsets(OffsetList.List, result, ref validOffsets);
-        BoneList.ParseBones(BoneList.List, result, ref validBones);
-        MessageBox.Show("Values downloaded and parsed successfully!\n" +
-            "Valid Offsets: " + validOffsets + "/" + OffsetList.List.Count + "\n" +
-            "Valid Bones: " + validBones + "/" + BoneList.List.Count,
-            "Dynago", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        txt.Clear();
-        update();
+        MessageBox.Show("Downloading values has been disabled.", "Dynago", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        return;
     }
 
     public static void UploadConfig(this Main f, TextBox txt) {
-        string uploadData = f.GenerateConfig();
-        string result = Networking.ShareUpload("config", uploadData);
-        if (string.IsNullOrEmpty(result)) {
-            txt.Text = "ERROR";
-            MessageBox.Show("An error has occurred while uploading your config.", "Dynago", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            return;
-        }
-        txt.Text = result;
-        bool copied = false;
-        try {
-            Clipboard.SetText(result);
-            copied = true;
-        } catch (Exception) { }
-        string successText = "Config uploaded successfully.\nGenerated ID: " + result;
-        if (copied) successText += "\nID copied to clipboard.";
-        MessageBox.Show(successText, "Dynago", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        MessageBox.Show("Uploading configs has been disabled.", "Dynago", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        return;
     }
 
     public static void DownloadConfig(this Main f, TextBox txt) {
-        string id = txt.Text;
-        if (id.Length != 8) {
-            MessageBox.Show("Invalid ID detected.\nPlease ensure your ID is correct and try again.", "Dynago", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            return;
-        }
-        string result = Networking.ShareDownload("config", id);
-        if (string.IsNullOrEmpty(result)) {
-            MessageBox.Show("An error has occurred.\nUnable to download config from ID: " + id + "\nPlease ensure your ID is correct and try again.", "Dynago", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            return;
-        }
-        try {
-            f.LoadConfig(result);
-            MessageBox.Show("Config downloaded and parsed successfully!", "Dynago", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        } catch (Exception) {
-            MessageBox.Show("Failed to parse/load configuration data.", "Dynago", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        }
-        txt.Clear();
+        MessageBox.Show("Downloading configs has been disabled.", "Dynago", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        return;
     }
 
 }

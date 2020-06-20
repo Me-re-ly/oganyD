@@ -84,15 +84,7 @@ static class OffsetList
             case 0:
                 try {
                     using (WebClient web = new WebClient()) {
-                        web.Headers.Add("user-agent", "Dynago");
-                        offsetData = web.DownloadString("https://justin-login.online/offsets/latest.php");
-                    }
-                } catch (Exception) { goto web_exception; }
-                break;
-            case 1:
-                try {
-                    using (WebClient web = new WebClient()) {
-                        web.Headers.Add("user-agent", "Dynago");
+                        web.Headers.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36");
                         offsetData = web.DownloadString("https://raw.githubusercontent.com/frk1/hazedumper/master/csgo.cs");
                     }
                 } catch (Exception) { goto web_exception; }

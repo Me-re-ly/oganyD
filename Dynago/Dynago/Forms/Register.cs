@@ -16,8 +16,8 @@ namespace Dynago.Forms
         {
             InitializeComponent();
             this.LockSize();
-            txtUsername.ApplyPlaceholder("desired username", Color.DarkGray, Color.FromArgb(255, 51, 153, 255));
-            txtPassword1.ApplyPlaceholder("your password", Color.DarkGray, Color.FromArgb(255, 51, 153, 255), "*");
+            txtUsername.ApplyPlaceholder("username", Color.DarkGray, Color.FromArgb(255, 51, 153, 255));
+            txtPassword1.ApplyPlaceholder("password", Color.DarkGray, Color.FromArgb(255, 51, 153, 255), "*");
             txtPassword2.ApplyPlaceholder("confirm password", Color.DarkGray, Color.FromArgb(255, 51, 153, 255), "*");
         }
 
@@ -33,22 +33,16 @@ namespace Dynago.Forms
 
         private void lblJustinOOO_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://justin.ooo/");
+            System.Diagnostics.Process.Start("https://github.com/Me-re-ly/oganyD/");
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
-            dynamic RegisterResult = Networking.Register(username, txtPassword1.Text, txtPassword2.Text);
-            if (RegisterResult.status == "successful" && RegisterResult.username == username)
-            {
-                MessageBox.Show($"Welcome, {username}! You can now log in.", "Account Created", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                OpenOther = true;
-                new Login().Show();
-                Close();
-            } else {
-                MessageBox.Show($"Account could not be created: " + RegisterResult.detail, "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            MessageBox.Show($"Welcome, {username}! You can now log in.", "Account Created", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            OpenOther = true;
+            new Login().Show();
+            Close();
         }
     }
 }

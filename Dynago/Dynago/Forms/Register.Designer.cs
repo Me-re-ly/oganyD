@@ -144,9 +144,9 @@
             this.lblJustinOOO.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.lblJustinOOO.Location = new System.Drawing.Point(218, 182);
             this.lblJustinOOO.Name = "lblJustinOOO";
-            this.lblJustinOOO.Size = new System.Drawing.Size(91, 13);
+            this.lblJustinOOO.Size = new System.Drawing.Size(127, 13);
             this.lblJustinOOO.TabIndex = 5;
-            this.lblJustinOOO.Text = "www.justin.ooo";
+            this.lblJustinOOO.Text = "github.com/Me-re-ly/";
             this.lblJustinOOO.Click += new System.EventHandler(this.lblJustinOOO_Click);
             // 
             // label4

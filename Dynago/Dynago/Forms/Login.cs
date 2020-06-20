@@ -21,8 +21,8 @@ namespace Dynago.Forms
             Text = Text.Replace("[0.0]", Program.currentVersion);
             lblCurrentVersion.Text = "Current Version: " + Program.currentVersion;
             lblNewestVersion.Text = "Newest Version: " + Program.newestVersion;
-            lblRegisteredUsers.Text = "Registered Users: " + Networking.GetData("registered_user_count");
-            txtChangelog.Text = Networking.GetData("changelog");
+            lblRegisteredUsers.Text = "Registered Users: " + Program.registeredMembers;
+            txtChangelog.Text = "Now Offline. Check GitHub.";
             CenterLabel(lblCurrentVersion); CenterLabel(lblNewestVersion); CenterLabel(lblRegisteredUsers);
             txtUsername.ApplyPlaceholder("username", Color.DarkGray, Color.FromArgb(255, 51, 153, 255));
             txtPassword.ApplyPlaceholder("password", Color.DarkGray, Color.FromArgb(255, 51, 153, 255), "*");
@@ -38,7 +38,7 @@ namespace Dynago.Forms
         private bool OpenOther = false;
         private void Login_FormClosing(object sender, FormClosingEventArgs e) { if (!OpenOther) Application.Exit(); }
         private void CenterLabel(Label lbl) { lbl.Left = (ClientSize.Width - lbl.Width) / 2; }
-        private void lblJustinOOO_Click(object sender, EventArgs e) { System.Diagnostics.Process.Start("https://justin.ooo/"); }
+        private void lblJustinOOO_Click(object sender, EventArgs e) { System.Diagnostics.Process.Start("https://github.com/Me-re-ly/oganyD"); }
 
         PanelTab LoginTab;
         PanelTab ChangelogTab;
@@ -64,49 +64,13 @@ namespace Dynago.Forms
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
-            dynamic LoginResult = Networking.Login(username, txtPassword.Text);
-            try {
-                switch ((string)LoginResult.status)
-                {
-                    case "successful":
-                        if (LoginResult.username == username)
-                        {
-                            Program.currentUserAds = (string)LoginResult.ads != "<false3";
-                            MessageBox.Show($"Welcome to Dynago v{Program.currentVersion}, {username}!", "Logged in", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Program.currentUser = username;
-                            OpenOther = true;
-                            if (Program.currentUserAds) new Advertisement().Show();
-                            else {
-                                if (!Properties.Settings.Default.adsRemovedThanks) {
-                                    MessageBox.Show($"Thank for paying to remove ads, {username}!\nI appreciate the support :)", "Dynago <3", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    Properties.Settings.Default.adsRemovedThanks = true;
-                                    Properties.Settings.Default.Save();
-                                }
-                                new Main().Show();
-                            }
-                            Close();
-                        } else {
-                            MessageBox.Show($"Incorrect username or password.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
-                        return;
-                    case "connection error":
-                        MessageBox.Show($"Connection error.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    case "no account":
-                        MessageBox.Show($"User not found.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    case "wrong password":
-                        MessageBox.Show($"Incorrect username or password.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    default:
-                        MessageBox.Show($"Incorrect username or password.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                }
-            } catch (Exception) {
-                MessageBox.Show($"An unknown error has occurred.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            MessageBox.Show($"Welcome to Dynago v{Program.currentVersion}, {username}!", "Logged in", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Program.currentUser = username;
+            OpenOther = true;
+
+            new Main().Show();
+            Close();
+            return;
         }
 
         private void btnCreateAnAccount_Click(object sender, EventArgs e)

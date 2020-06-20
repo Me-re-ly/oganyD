@@ -39,8 +39,8 @@ static class BoneList {
             case 0:
                 try {
                     using (WebClient web = new WebClient()) {
-                        web.Headers.Add("user-agent", "Dynago");
-                        boneData = web.DownloadString("https://pastebin.com/raw/dwt2YAe5");
+                        web.Headers.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36");
+                        boneData = web.DownloadString("https://pastebin.com/raw/wU27LfWZ");
                     }
                 } catch (Exception) { goto web_exception; }
                 break;

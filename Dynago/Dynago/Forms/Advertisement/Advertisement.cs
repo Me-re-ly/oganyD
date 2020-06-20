@@ -30,7 +30,7 @@ namespace Dynago.Forms {
         private CopyURL copyURL = null;
         private bool OpenOther = false;
         private void Advertisement_FormClosing(object sender, FormClosingEventArgs e) { if (!OpenOther) Application.Exit(); }
-        private void lblRemoveAds_CLICK(object sender, EventArgs e) { Process.Start("https://selly.gg/p/4e4b5f82"); }
+        private void lblRemoveAds_CLICK(object sender, EventArgs e) { MessageBox.Show("Ads no longer included.", "Dynago", MessageBoxButtons.OK, MessageBoxIcon.Information); }
 
         public Advertisement() {
             InitializeComponent();
@@ -43,19 +43,7 @@ namespace Dynago.Forms {
         private bool checkerRunning = false;
 
         private void OpenAdvertisement(object sender, EventArgs e) {
-            try { Process.Start(adURL); } 
-            catch (Exception) {
-                copyURL = new CopyURL(adURL);
-                copyURL.Show();
-            }
-            if (!checkerRunning) {
-                checkerRunning = true;
-                pb.Visible = true;
-                this.ChangeSize(389, 245);
-                adChecker.Start();
-            }
-            if (!copyURL.IsNull())
-                copyURL.Activate();
+            MessageBox.Show("Attempted to open advertisement.", "Dynago", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         int timesExecuted = 0;
@@ -88,25 +76,7 @@ namespace Dynago.Forms {
         }
 
         private void Advertisement_Load(object sender, EventArgs e) {
-            try {
-                lblEarned.Text = "$" + Networking.GetData("adfly_monthly_earnings");
-                lblPreEarned.Left -= lblEarned.Width / 2;
-                lblEarned.Left = lblPreEarned.Right;
-
-                using (WebClient web = new WebClient()) {
-                    web.Headers.Add("user-agent", "Dynago");
-                    web.NullifyProxy();
-                    adURL = web.DownloadString(Program.url_adGenerate);
-                }
-                if (adURL == "failed") {
-                    MessageBox.Show("Advertisement failed.\nIt's on our end, try again later!", "Dynago", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Application.Exit();
-                }
-                btnOpen.Enabled = true;
-            } catch (Exception) {
-                MessageBox.Show("Advertisement failed for an unknown reason.", "Dynago", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Application.Exit();
-            }
+                MessageBox.Show("Attempted to load advertisement.", "Dynago", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
