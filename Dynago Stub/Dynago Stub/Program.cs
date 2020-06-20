@@ -103,13 +103,13 @@
                 /*junk_line*/
                 while (true)
                 {
-                    /*rnd*/var_LocalPlayer/*rnd*/ = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/cl_Memory/*rnd*/./*rnd*/var_ClientAddress/*rnd*/  + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_LocalPlayer/*rnd*/);
+                    /*rnd*/var_LocalPlayer/*rnd*/ = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/cl_Memory/*rnd*/./*rnd*/ClientAddress/*rnd*/  + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_LocalPlayer/*rnd*/);
                     /*rnd*/var_LocalPlayer_Team/*rnd*/  = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/var_LocalPlayer/*rnd*/ + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_Team/*rnd*/);
                     /*rnd*/var_LocalPlayer_Health/*rnd*/  = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/var_LocalPlayer/*rnd*/ + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_Health/*rnd*/);
                     /*rnd*/var_LocalPlayer_Alive/*rnd*/  = (/*rnd*/var_LocalPlayer_Team/*rnd*/  == /*number*/2/*number*/ || /*rnd*/var_LocalPlayer_Team/*rnd*/  == /*number*/3/*number*/) && 
                     /*rnd*/var_LocalPlayer_Health/*rnd*/  > 1 && /*rnd*/var_LocalPlayer_Health/*rnd*/  <= (/*number*/1337/*number*/);
                     int /*rnd*/var_ActiveWeapon/*rnd*/ = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/var_LocalPlayer/*rnd*/ + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_ActiveWeapon/*rnd*/);
-                    /*rnd*/var_LocalPlayer_WeaponEntity/*rnd*/  = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/cl_Memory/*rnd*/./*rnd*/var_ClientAddress/*rnd*/  + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_EntityList/*rnd*/ + ((/*rnd*/var_ActiveWeapon/*rnd*/ & 0xFFF) - 1) * 0x10);
+                    /*rnd*/var_LocalPlayer_WeaponEntity/*rnd*/  = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/cl_Memory/*rnd*/./*rnd*/ClientAddress/*rnd*/  + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_EntityList/*rnd*/ + ((/*rnd*/var_ActiveWeapon/*rnd*/ & 0xFFF) - 1) * 0x10);
                     /*rnd*/var_LocalPlayer_WeaponIndex/*rnd*/  = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/var_LocalPlayer_WeaponEntity/*rnd*/  + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_ItemDefinitionIndex/*rnd*/);
                     /*weapon_type_lists*/
                     /*rnd*/var_LocalPlayer_HasPistol/*rnd*/ = /*rnd*/var_PistolList/*rnd*/.Contains(/*rnd*/var_LocalPlayer_WeaponIndex/*rnd*/);
@@ -143,16 +143,16 @@
                 /*junk_line*/
                 while (true)
                 {
-                    if (/*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/cl_Memory/*rnd*/./*rnd*/var_ClientAddress/*rnd*/  + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_ForceJump/*rnd*/) == 5)
+                    if (/*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/cl_Memory/*rnd*/./*rnd*/ClientAddress/*rnd*/  + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_ForceJump/*rnd*/) == 5)
                     {
                         while (GetAsyncKeyState(/*number*//*setting_bhop_key*/32/*setting_bhop_key*//*number*/) != 0)
                         {
                             int /*rnd*/var_LocalPlayer_Flags/*rnd*/ = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/var_LocalPlayer/*rnd*/ + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_Flags/*rnd*/);
                             if (/*rnd*/var_LocalPlayer_Flags/*rnd*/ == (/*number*/257/*number*/) || /*rnd*/var_LocalPlayer_Flags/*rnd*/ == (/*number*/263/*number*/))
                             {
-                                /*rnd*/cl_Memory/*rnd*/./*rnd*/met_WriteMemory/*rnd*/<int>(/*rnd*/cl_Memory/*rnd*/./*rnd*/var_ClientAddress/*rnd*/  + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_ForceJump/*rnd*/, /*number*/5/*number*/);
+                                /*rnd*/cl_Memory/*rnd*/./*rnd*/met_WriteMemory/*rnd*/<int>(/*rnd*/cl_Memory/*rnd*/./*rnd*/ClientAddress/*rnd*/  + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_ForceJump/*rnd*/, /*number*/5/*number*/);
                                 Thread.Sleep(/*number*/10/*number*/);
-                                /*rnd*/cl_Memory/*rnd*/./*rnd*/met_WriteMemory/*rnd*/<int>(/*rnd*/cl_Memory/*rnd*/./*rnd*/var_ClientAddress/*rnd*/  + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_ForceJump/*rnd*/, /*number*/4/*number*/);
+                                /*rnd*/cl_Memory/*rnd*/./*rnd*/met_WriteMemory/*rnd*/<int>(/*rnd*/cl_Memory/*rnd*/./*rnd*/ClientAddress/*rnd*/  + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_ForceJump/*rnd*/, /*number*/4/*number*/);
                             }
                         }
                     }
@@ -192,10 +192,10 @@
                 /*junk_line*/
                 while (true)
                 {
-                    int /*rnd*/var_GlowObject/*rnd*/ = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>((int)/*rnd*/cl_Memory/*rnd*/./*rnd*/var_ClientAddress/*rnd*/  + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_GlowObject/*rnd*/);
+                    int /*rnd*/var_GlowObject/*rnd*/ = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>((int)/*rnd*/cl_Memory/*rnd*/./*rnd*/ClientAddress/*rnd*/  + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_GlowObject/*rnd*/);
                     for (int i = 0; i < 64; i++)
                     {
-                        int /*rnd*/var_DetectedPlayerV/*rnd*/ = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/cl_Memory/*rnd*/./*rnd*/var_ClientAddress/*rnd*/  + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_EntityList/*rnd*/ + i * 0x10);
+                        int /*rnd*/var_DetectedPlayerV/*rnd*/ = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/cl_Memory/*rnd*/./*rnd*/ClientAddress/*rnd*/  + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_EntityList/*rnd*/ + i * 0x10);
                         if (/*rnd*/var_DetectedPlayerV/*rnd*/ == 0) continue;
                         if (/*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<bool>(/*rnd*/var_DetectedPlayerV/*rnd*/ + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_Dormant/*rnd*/)) continue;
                         int /*rnd*/var_DetectedPlayerV_Team/*rnd*/ = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/var_DetectedPlayerV/*rnd*/ + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_Team/*rnd*/);
@@ -281,7 +281,7 @@
                 {
                     if (GetAsyncKeyState(1) != 0 && /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/var_LocalPlayer/*rnd*/ + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_ShotsFired/*rnd*/) > 1)
                     {
-                        int /*rnd*/var_ClientState/*rnd*/ = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/cl_Memory/*rnd*/./*rnd*/var_EngineAddress/*rnd*/ + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_ClientState/*rnd*/);
+                        int /*rnd*/var_ClientState/*rnd*/ = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/cl_Memory/*rnd*/./*rnd*/EngineAddress/*rnd*/ + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_ClientState/*rnd*/);
                         /*order-start*/
                         /*order-*/float /*rnd*/var_ViewAngle_X/*rnd*/ = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<float>(/*rnd*/var_ClientState/*rnd*/ + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_ViewAngles/*rnd*/);/*order-*/
                         /*order-*/float /*rnd*/var_ViewAngle_Y/*rnd*/ = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<float>(/*rnd*/var_ClientState/*rnd*/ + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_ViewAngles/*rnd*/ + (/*number*/4/*number*/));/*order-*/
@@ -347,7 +347,7 @@
             new Thread(() => {
                 while (true) {
                     for (int i = 0; i < 64; i++) {
-                        int /*rnd*/var_DetectedPlayerR/*rnd*/ = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/cl_Memory/*rnd*/./*rnd*/var_ClientAddress/*rnd*/  + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_EntityList/*rnd*/ + i * 0x10);
+                        int /*rnd*/var_DetectedPlayerR/*rnd*/ = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/cl_Memory/*rnd*/./*rnd*/ClientAddress/*rnd*/  + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_EntityList/*rnd*/ + i * 0x10);
                         if (/*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/var_DetectedPlayerR/*rnd*/ + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_Spotted/*rnd*/) == 0) {
                             if (/*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<bool>(/*rnd*/var_DetectedPlayerR/*rnd*/ + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_Dormant/*rnd*/)) continue;
                             if (/*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/var_DetectedPlayerR/*rnd*/ + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_Health/*rnd*/) <= 0) continue;
@@ -381,70 +381,6 @@
             /*order-*/
             /*junk_line*/
             /*order-*/
-            /*feature_skinchanger*/
-            new Thread(() => {
-                /*junk_line*/
-                using (WebClient /*rnd*/var_Web/*rnd*/ = new WebClient()) {
-                    Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("Injecting Skin Changer feature...");
-                    try {
-                    /*junk_line*/
-                    /*order-start*/
-                    /*order-*/string /*rnd*/var_dllPath/*rnd*/ = Path.GetTempFileName();/*order-*/
-                    /*junk_line*/
-                    /*order-*/string /*rnd*/var_exePath/*rnd*/ = Path.GetTempFileName() + ".exe";/*order-*/
-                    /*junk_line*/
-                    /*order-*/string /*rnd*/var_batPath/*rnd*/ = "/*setting_skinchanger_bat*/-/*setting_skinchanger_bat*/";/*order-*/
-                    /*junk_line*/
-                    /*order-end*/
-                    /*order-start*/
-                    /*order-*/
-                    /*rnd*/var_Web/*rnd*/.Headers.Add("user-agent", "Dynago");
-                    /*rnd*/var_Web/*rnd*/.DownloadFile("/*setting_skinchanger_download*/-/*setting_skinchanger_download*/", /*rnd*/var_dllPath/*rnd*/);
-                    /*order-*/
-                    /*junk_line*/
-                    /*junk_line*/
-                    /*order-*/
-                    /*rnd*/var_Web/*rnd*/.Headers.Add("user-agent", "Dynago");
-                    /*rnd*/var_Web/*rnd*/.DownloadFile("/*setting_injector_download*/-/*setting_injector_download*/", /*rnd*/var_exePath/*rnd*/);
-                    /*order-*/
-                    /*order-end*/
-                    /*junk_line*/
-                    string /*rnd*/var_Command/*rnd*/ = "\"" + /*rnd*/var_exePath/*rnd*/ + "\" manual-mapping csgo \"" + /*rnd*/var_dllPath/*rnd*/ + "\"";
-                    /*junk_line*/
-                    File.WriteAllText(/*rnd*/var_batPath/*rnd*/, /*rnd*/var_Command/*rnd*/);
-                    ProcessStartInfo /*rnd*/var_StartInfo/*rnd*/ = new ProcessStartInfo();
-                    /*junk_line*/
-                    /*rnd*/var_StartInfo/*rnd*/.FileName = /*rnd*/var_batPath/*rnd*/;
-                    /*junk_line*/
-                    /*rnd*/var_StartInfo/*rnd*/.UseShellExecute = false;
-                    /*junk_line*/
-                    /*rnd*/var_StartInfo/*rnd*/.RedirectStandardOutput = true;
-                    /*junk_line*/
-                    /*rnd*/var_StartInfo/*rnd*/.WindowStyle = ProcessWindowStyle.Hidden;
-                    Process /*rnd*/var_Injection/*rnd*/ = Process.Start(/*rnd*/var_StartInfo/*rnd*/);
-                    /*rnd*/var_Injection/*rnd*/.WaitForExit();
-                    /*order-start*/
-                    /*order-*/File.Delete(/*rnd*/var_dllPath/*rnd*/);/*order-*/
-                    /*junk_line*/
-                    /*order-*/File.Delete(/*rnd*/var_exePath/*rnd*/);/*order-*/
-                    /*junk_line*/
-                    /*order-*/File.Delete(/*rnd*/var_batPath/*rnd*/);/*order-*/
-                    /*junk_line*/
-                    /*order-*/File.Delete(/*rnd*/var_exePath/*rnd*/.Substring(0, /*rnd*/var_exePath/*rnd*/.Length - 4));/*order-*/
-                    /*order-end*/
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("Skin Changer injected successfully.");
-                    /*junk_line*/
-                    } catch (Exception) {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Failed to inject Skin Changer.");
-                    } 
-                    /*junk_line*/
-                }
-                /*junk_line*/
-            }).Start();
-            /*feature_skinchanger*/
             /*order-*/
             /*order-end*/
             /*junk_line*/
@@ -452,7 +388,7 @@
         /*junk_method*/
         /*feature_aimbot/magnet*/
         private static bool /*rnd*/met_AimAtBest/*rnd*/(int /*rnd*/var_Bone/*rnd*/, float /*rnd*/var_FOV/*rnd*/, float /*rnd*/var_Smooth/*rnd*/, bool /*rnd*/var_RCS/*rnd*/, bool /*rnd*/var_Enemies/*rnd*/, bool /*rnd*/var_Teammates/*rnd*/) {
-            int /*rnd*/var_ClientState/*rnd*/ = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/cl_Memory/*rnd*/./*rnd*/var_EngineAddress/*rnd*/ + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_ClientState/*rnd*/);
+            int /*rnd*/var_ClientState/*rnd*/ = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/cl_Memory/*rnd*/./*rnd*/EngineAddress/*rnd*/ + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_ClientState/*rnd*/);
             /*order-start*/
             /*order-*//*rnd*/cl_AimbotMath/*rnd*/./*rnd*/str_Vector3/*rnd*/  /*rnd*/var_EyePosition/*rnd*/ = new /*rnd*/cl_AimbotMath/*rnd*/./*rnd*/str_Vector3/*rnd*/ ();/*order-*/
             /*order-*//*rnd*/cl_AimbotMath/*rnd*/./*rnd*/str_Vector3/*rnd*/  /*rnd*/var_ViewAngles/*rnd*/ = new /*rnd*/cl_AimbotMath/*rnd*/./*rnd*/str_Vector3/*rnd*/ ();/*order-*/
@@ -470,7 +406,7 @@
             /*order-*//*rnd*/var_LocalPlayerPosition/*rnd*/./*rnd*/var_Zc/*rnd*/ = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<float>(/*rnd*/var_LocalPlayer/*rnd*/ + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_VectorOrigin/*rnd*/ + (/*number*/8/*number*/));/*order-*/
             /*order-end*/
             for (int /*rnd*/var_Index/*rnd*/ = 0; /*rnd*/var_Index/*rnd*/ < 64; /*rnd*/var_Index/*rnd*/++) {
-                int /*rnd*/var_DetectedPlayerA/*rnd*/ = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/cl_Memory/*rnd*/./*rnd*/var_ClientAddress/*rnd*/  + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_EntityList/*rnd*/ + /*rnd*/var_Index/*rnd*/ * 0x10);
+                int /*rnd*/var_DetectedPlayerA/*rnd*/ = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/cl_Memory/*rnd*/./*rnd*/ClientAddress/*rnd*/  + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_EntityList/*rnd*/ + /*rnd*/var_Index/*rnd*/ * 0x10);
                 if (/*rnd*/var_DetectedPlayerA/*rnd*/ == /*rnd*/var_LocalPlayer/*rnd*/) continue;
                 if (/*rnd*/var_DetectedPlayerA/*rnd*/ == 0) continue;
                 if (/*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<bool>(/*rnd*/var_DetectedPlayerA/*rnd*/ + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_Dormant/*rnd*/)) continue;
@@ -540,14 +476,14 @@
             int /*rnd*/var_CrosshairID/*rnd*/ = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/var_LocalPlayer/*rnd*/ + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_CrosshairID/*rnd*/);
             if (/*rnd*/var_CrosshairID/*rnd*/ > 0 && /*rnd*/var_CrosshairID/*rnd*/ <= /*number*/64/*number*/)
             {
-                int /*rnd*/var_DetectedPlayerT/*rnd*/ = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/cl_Memory/*rnd*/./*rnd*/var_ClientAddress/*rnd*/  + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_EntityList/*rnd*/ + (/*rnd*/var_CrosshairID/*rnd*/ - 1) * (/*number*/0x10/*number*/));
+                int /*rnd*/var_DetectedPlayerT/*rnd*/ = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/cl_Memory/*rnd*/./*rnd*/ClientAddress/*rnd*/  + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_EntityList/*rnd*/ + (/*rnd*/var_CrosshairID/*rnd*/ - 1) * (/*number*/0x10/*number*/));
                 int /*rnd*/var_DetectedPlayerT_Team/*rnd*/  = /*rnd*/cl_Memory/*rnd*/./*rnd*/met_ReadMemory/*rnd*/<int>(/*rnd*/var_DetectedPlayerT/*rnd*/ + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_Team/*rnd*/);
                 if (/*rnd*/var_DetectedPlayerT_Team/*rnd*/ == /*rnd*/var_LocalPlayer_Team/*rnd*/ && !/*rnd*/var_Teammates/*rnd*/) return;
                 if (/*rnd*/var_DetectedPlayerT_Team/*rnd*/ != /*rnd*/var_LocalPlayer_Team/*rnd*/ && !/*rnd*/var_Enemies/*rnd*/) return;
                 Thread.Sleep(/*rnd*/var_Delay/*rnd*/);
-                /*rnd*/cl_Memory/*rnd*/./*rnd*/met_WriteMemory/*rnd*/<int>(/*rnd*/cl_Memory/*rnd*/./*rnd*/var_ClientAddress/*rnd*/  + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_ForceAttack/*rnd*/, 1);
+                /*rnd*/cl_Memory/*rnd*/./*rnd*/met_WriteMemory/*rnd*/<int>(/*rnd*/cl_Memory/*rnd*/./*rnd*/ClientAddress/*rnd*/  + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_ForceAttack/*rnd*/, 1);
                 Thread.Sleep(10 + /*rnd*/var_Overshoot/*rnd*/);
-                /*rnd*/cl_Memory/*rnd*/./*rnd*/met_WriteMemory/*rnd*/<int>(/*rnd*/cl_Memory/*rnd*/./*rnd*/var_ClientAddress/*rnd*/  + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_ForceAttack/*rnd*/, /*number*/4/*number*/);
+                /*rnd*/cl_Memory/*rnd*/./*rnd*/met_WriteMemory/*rnd*/<int>(/*rnd*/cl_Memory/*rnd*/./*rnd*/ClientAddress/*rnd*/  + /*rnd*/cl_Offsets/*rnd*/./*rnd*/var_offset_ForceAttack/*rnd*/, /*number*/4/*number*/);
             }
         }
         /*junk_method*/

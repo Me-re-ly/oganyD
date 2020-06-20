@@ -1,0 +1,7 @@
+C:\Users\xXGamer69StationXx\Desktop\Dynago-master\Dynago Stub\Dynago Stub\obj\Release\Dynago Stub.csprojAssemblyReference.cache
+C:\Users\xXGamer69StationXx\Desktop\Dynago-master\Dynago Stub\Dynago Stub\obj\Release\Dynago Stub.csproj.CoreCompileInputs.cache
+C:\Users\xXGamer69StationXx\Desktop\Dynago-master\Dynago Stub\Dynago Stub\bin\Release\Dynago Stub.exe.config
+C:\Users\xXGamer69StationXx\Desktop\Dynago-master\Dynago Stub\Dynago Stub\bin\Release\Dynago Stub.exe
+C:\Users\xXGamer69StationXx\Desktop\Dynago-master\Dynago Stub\Dynago Stub\bin\Release\Dynago Stub.pdb
+C:\Users\xXGamer69StationXx\Desktop\Dynago-master\Dynago Stub\Dynago Stub\obj\Release\Dynago Stub.exe
+C:\Users\xXGamer69StationXx\Desktop\Dynago-master\Dynago Stub\Dynago Stub\obj\Release\Dynago Stub.pdb
