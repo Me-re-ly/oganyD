@@ -4,39 +4,39 @@ namespace /*rnd*/DynagoStub/*rnd*/
     {
         /*junk_method*/
         /*order-start*/
-        /*order-*/public static int /*rnd*/var_offset_LocalPlayer/*rnd*/ = /*number*//*offset_LocalPlayer*/0xA9ADEC/*offset_LocalPlayer*//*number*/;/*order-*/
-        /*order-*/public static int /*rnd*/var_offset_Health/*rnd*/ = /*number*//*offset_Health*/0xFC/*offset_Health*//*number*/;/*order-*/
-        /*order-*/public static int /*rnd*/var_offset_Team/*rnd*/ = /*number*//*offset_Team*/0xF0/*offset_Team*//*number*/;/*order-*/
+        /*order-*/public static int /*rnd*/var_offset_LocalPlayer/*rnd*/ = /*offset_LocalPlayer*/0xD3BBEC/*offset_LocalPlayer*/;/*order-*/
+        /*order-*/public static int /*rnd*/var_offset_Health/*rnd*/ = /*offset_Health*/0x100/*offset_Health*/;/*order-*/
+        /*order-*/public static int /*rnd*/var_offset_Team/*rnd*/ = /*offset_Team*/0xF4/*offset_Team*/;/*order-*/
         /*junk_method*/
-        /*order-*/public static int /*rnd*/var_offset_FlashMaxAlpha/*rnd*/  = /*number*//*offset_FlashMaxAlpha*/0xA304/*offset_FlashMaxAlpha*//*number*/;/*order-*/
-        /*order-*/public static int /*rnd*/var_offset_CrosshairID/*rnd*/ = /*number*//*offset_CrosshairID*/0xB294/*offset_CrosshairID*//*number*/;/*order-*/
-        /*order-*/public static int /*rnd*/var_offset_IsScoped/*rnd*/ = /*number*//*offset_IsScoped*/0x389C/*offset_IsScoped*//*number*/;/*order-*/
+        /*order-*/public static int /*rnd*/var_offset_FlashMaxAlpha/*rnd*/  = /*offset_FlashMaxAlpha*/0xA41C/*offset_FlashMaxAlpha*/;/*order-*/
+        /*order-*/public static int /*rnd*/var_offset_CrosshairID/*rnd*/ = /*offset_CrosshairID*/0xB3E4/*offset_CrosshairID*/;/*order-*/
+        /*order-*/public static int /*rnd*/var_offset_IsScoped/*rnd*/ = /*offset_IsScoped*/0x3928/*offset_IsScoped*/;/*order-*/
         /*junk_method*/
-        /*order-*/public static int /*rnd*/var_offset_EntityList/*rnd*/ = /*number*//*offset_EntityList*/0x4A77AFC/*offset_EntityList*//*number*/;/*order-*/
-        /*order-*/public static int /*rnd*/var_offset_ForceAttack/*rnd*/ = /*number*//*offset_ForceAttack*/0x2EC8E98/*offset_ForceAttack*//*number*/;/*order-*/
-        /*order-*/public static int /*rnd*/var_offset_ForceJump/*rnd*/ = /*number*//*offset_ForceJump*/0x4F22F20/*offset_ForceJump*//*number*/;/*order-*/
+        /*order-*/public static int /*rnd*/var_offset_EntityList/*rnd*/ = /*offset_EntityList*/0x4D5022C/*offset_EntityList*/;/*order-*/
+        /*order-*/public static int /*rnd*/var_offset_ForceAttack/*rnd*/ = /*offset_ForceAttack*/0x318179C/*offset_ForceAttack*/;/*order-*/
+        /*order-*/public static int /*rnd*/var_offset_ForceJump/*rnd*/ = /*offset_ForceJump*/0x51F9EC4/*offset_ForceJump*/;/*order-*/
         /*junk_method*/
-        /*order-*/public static int /*rnd*/var_offset_GlowObject/*rnd*/ = /*number*//*offset_GlowObject*/0x4FA3288/*offset_GlowObject*//*number*/;/*order-*/
-        /*order-*/public static int /*rnd*/var_offset_GlowIndex/*rnd*/ = /*number*//*offset_GlowIndex*/0xA300/*offset_GlowIndex*//*number*/;/*order-*/
-        /*order-*/public static int /*rnd*/var_offset_Flags/*rnd*/ = /*number*//*offset_Flags*/0x100/*offset_Flags*//*number*/;/*order-*/
+        /*order-*/public static int /*rnd*/var_offset_GlowObject/*rnd*/ = /*offset_GlowObject*/0x5298070/*offset_GlowObject*/;/*order-*/
+        /*order-*/public static int /*rnd*/var_offset_GlowIndex/*rnd*/ = /*offset_GlowIndex*/0xA438/*offset_GlowIndex*/;/*order-*/
+        /*order-*/public static int /*rnd*/var_offset_Flags/*rnd*/ = /*offset_Flags*/0x104/*offset_Flags*/;/*order-*/
         /*junk_method*/
-        /*order-*/public static int /*rnd*/var_offset_AimPunch/*rnd*/ = /*number*//*offset_AimPunch*/0x301C/*offset_AimPunch*//*number*/;/*order-*/
-        /*order-*/public static int /*rnd*/var_offset_ClientState/*rnd*/ = /*number*//*offset_ClientState*/0x57D84C/*offset_ClientState*//*number*/;/*order-*/
-        /*order-*/public static int /*rnd*/var_offset_ViewAngles/*rnd*/ = /*number*//*offset_ViewAngles*/0x4D10/*offset_ViewAngles*//*number*/;/*order-*/
+        /*order-*/public static int /*rnd*/var_offset_AimPunch/*rnd*/ = /*offset_AimPunch*/0x302C/*offset_AimPunch*/;/*order-*/
+        /*order-*/public static int /*rnd*/var_offset_ClientState/*rnd*/ = /*offset_ClientState*/0x58ADD4/*offset_ClientState*/;/*order-*/
+        /*order-*/public static int /*rnd*/var_offset_ViewAngles/*rnd*/ = /*offset_ViewAngles*/0x4D88/*offset_ViewAngles*/;/*order-*/
         /*junk_method*/
-        /*order-*/public static int /*rnd*/var_offset_ShotsFired/*rnd*/ = /*number*//*offset_ShotsFired*/0xA2B0/*offset_ShotsFired*//*number*/;/*order-*/
-        /*order-*/public static int /*rnd*/var_offset_BoneMatrix/*rnd*/ = /*number*//*offset_BoneMatrix*/0x2698/*offset_BoneMatrix*//*number*/;/*order-*/
-        /*order-*/public static int /*rnd*/var_offset_VectorOrigin/*rnd*/ = /*number*//*offset_VectorOrigin*/0x134/*offset_VectorOrigin*//*number*/;/*order-*/
+        /*order-*/public static int /*rnd*/var_offset_ShotsFired/*rnd*/ = /*offset_ShotsFired*/0xA390/*offset_ShotsFired*/;/*order-*/
+        /*order-*/public static int /*rnd*/var_offset_BoneMatrix/*rnd*/ = /*offset_BoneMatrix*/0x26A8/*offset_BoneMatrix*/;/*order-*/
+        /*order-*/public static int /*rnd*/var_offset_VectorOrigin/*rnd*/ = /*offset_VectorOrigin*/0x138/*offset_VectorOrigin*/;/*order-*/
         /*junk_method*/
-        /*order-*/public static int /*rnd*/var_offset_VectorView/*rnd*/ = /*number*//*offset_VectorView*/0x104/*offset_VectorView*//*number*/;/*order-*/
-        /*order-*/public static int /*rnd*/var_offset_Spotted/*rnd*/ = /*number*//*offset_Spotted*/0x97C/*offset_Spotted*//*number*/;/*order-*/
-        /*order-*/public static int /*rnd*/var_offset_ActiveWeapon/*rnd*/ = /*number*//*offset_ActiveWeapon*/0x2EE8/*offset_ActiveWeapon*//*number*/;/*order-*/
+        /*order-*/public static int /*rnd*/var_offset_VectorView/*rnd*/ = /*number*//*offset_VectorView*/0x108/*offset_VectorView*/;/*order-*/
+        /*order-*/public static int /*rnd*/var_offset_Spotted/*rnd*/ = /*number*//*offset_Spotted*/0x93D/*offset_Spotted*/;/*order-*/
+        /*order-*/public static int /*rnd*/var_offset_ActiveWeapon/*rnd*/ = /*offset_ActiveWeapon*/0x2EF8/*offset_ActiveWeapon*/;/*order-*/
         /*junk_method*/
-        /*order-*/public static int /*rnd*/var_offset_ItemDefinitionIndex/*rnd*/ = /*number*//*offset_ItemDefinitionIndex*/0x2F88/*offset_ItemDefinitionIndex*//*number*/;/*order-*/
-        /*order-*/public static int /*rnd*/var_offset_ZoomLevel/*rnd*/ = /*number*//*offset_ZoomLevel*/0x16E8/*offset_ZoomLevel*//*number*/;/*order-*/
-        /*order-*/public static int /*rnd*/var_offset_Dormant/*rnd*/ = /*number*//*offset_Dormant*/0xE9/*offset_Dormant*//*number*/;/*order-*/
+        /*order-*/public static int /*rnd*/var_offset_ItemDefinitionIndex/*rnd*/ = /*offset_ItemDefinitionIndex*/0x2FAA/*offset_ItemDefinitionIndex*/;/*order-*/
+        /*order-*/public static int /*rnd*/var_offset_ZoomLevel/*rnd*/ = /*offset_ZoomLevel*/0x16E8/*offset_ZoomLevel*/;/*order-*/
+        /*order-*/public static int /*rnd*/var_offset_Dormant/*rnd*/ = /*offset_Dormant*/0xED/*offset_Dormant*/;/*order-*/
         /*junk_method*/
-        /*order-*/public static int /*rnd*/var_offset_FOV/*rnd*/ = /*number*//*offset_FOV*/0x31D4/*offset_FOV*//*number*/;/*order-*/
+        /*order-*/public static int /*rnd*/var_offset_FOV/*rnd*/ = /*offset_FOV*/0x31E4/*offset_FOV*/;/*order-*/
         /*order-end*/
     }
 }
