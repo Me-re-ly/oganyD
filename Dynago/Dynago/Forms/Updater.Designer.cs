@@ -27,8 +27,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblBytes = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblJustinOOO = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.githubLink = new System.Windows.Forms.Label();
             this.txtUpgrading = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -72,28 +71,17 @@
             this.label1.TabIndex = 106;
             this.label1.Text = "Updating Dynago";
             // 
-            // lblJustinOOO
+            // githubLink
             // 
-            this.lblJustinOOO.AutoSize = true;
-            this.lblJustinOOO.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJustinOOO.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.lblJustinOOO.Location = new System.Drawing.Point(166, 146);
-            this.lblJustinOOO.Name = "lblJustinOOO";
-            this.lblJustinOOO.Size = new System.Drawing.Size(91, 13);
-            this.lblJustinOOO.TabIndex = 110;
-            this.lblJustinOOO.Text = "www.justin.ooo";
-            this.lblJustinOOO.Click += new System.EventHandler(this.lblJustinOOO_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(100, 146);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 13);
-            this.label3.TabIndex = 111;
-            this.label3.Text = "Powered by";
+            this.githubLink.AutoSize = true;
+            this.githubLink.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.githubLink.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.githubLink.Location = new System.Drawing.Point(115, 146);
+            this.githubLink.Name = "githubLink";
+            this.githubLink.Size = new System.Drawing.Size(127, 13);
+            this.githubLink.TabIndex = 110;
+            this.githubLink.Text = "github.com/Me-re-ly/";
+            this.githubLink.Click += new System.EventHandler(this.githubLink_Click);
             // 
             // txtUpgrading
             // 
@@ -113,8 +101,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.ClientSize = new System.Drawing.Size(357, 175);
             this.Controls.Add(this.txtUpgrading);
-            this.Controls.Add(this.lblJustinOOO);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.githubLink);
             this.Controls.Add(this.pb);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblBytes);
@@ -135,8 +122,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblBytes;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblJustinOOO;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label githubLink;
         private System.Windows.Forms.Label txtUpgrading;
     }
 }

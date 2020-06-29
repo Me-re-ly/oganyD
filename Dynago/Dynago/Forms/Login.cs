@@ -38,7 +38,7 @@ namespace Dynago.Forms
         private bool OpenOther = false;
         private void Login_FormClosing(object sender, FormClosingEventArgs e) { if (!OpenOther) Application.Exit(); }
         private void CenterLabel(Label lbl) { lbl.Left = (ClientSize.Width - lbl.Width) / 2; }
-        private void lblJustinOOO_Click(object sender, EventArgs e) { System.Diagnostics.Process.Start("https://github.com/Me-re-ly/oganyD"); }
+        private void githubLink_Click(object sender, EventArgs e) { System.Diagnostics.Process.Start("https://github.com/Me-re-ly/oganyD"); }
 
         PanelTab LoginTab;
         PanelTab ChangelogTab;
@@ -49,15 +49,12 @@ namespace Dynago.Forms
             if (selected.IsNull()) return;
             if (selected == ChangelogTab) {
                 this.ChangeSize(468, 482);
-                lblPoweredBy.Location = new Point(148, 422);
-                lblJustinOOO.Location = new Point(214, 422);
+                githubLink.Location = new Point(214, 422);
             } else if (selected == LoginTab) {
                 this.ChangeSize(468, 337);
-                lblPoweredBy.Location = new Point(148, 278);
-                lblJustinOOO.Location = new Point(214, 278);
+                githubLink.Location = new Point(214, 278);
             }
-            lblPoweredBy.BringToFront();
-            lblJustinOOO.BringToFront();
+            githubLink.BringToFront();
             CenterToScreen();
         }
 

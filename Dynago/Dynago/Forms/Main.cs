@@ -63,13 +63,13 @@ namespace Dynago.Forms {
 
             // account stuff
             lblLoggedIn.Text = Program.currentUser;
-            lblAdvertisements.Text = Program.currentUserAds ? "Active" : "Removed";
-            lblAdvertisements.ForeColor = Program.currentUserAds ? Color.Red : Color.Green;
+            lblAdvertisements.Text = "Removed";
+            lblAdvertisements.ForeColor = Color.Green;
             lblLoggedIn.Left = lblPreLoggedIn.Right;
             lblAdvertisements.Left = lblPreAdvertisements.Right;
             lblRemoveAds.OnHover(Color.FromArgb(51, 153, 255));
             lblRemoveAds.Left = lblAdvertisements.Right;
-            lblRemoveAds.Visible = Program.currentUserAds;
+            lblRemoveAds.Visible = false;
 
             // weapon config stuff (yikes?)
             general_settings = new WeaponSettings(this);
@@ -102,14 +102,14 @@ namespace Dynago.Forms {
         private void cb_trigger_magnetic_CheckedChanged(object sender, EventArgs e) { lblCustomizeTriggerMagnetic.Visible = cb_trigger_magnetic.Checked; }
         private void lblCustomizeTriggerMagnetic_Click(object sender, EventArgs e) { pnlTrigger2.BringToFront(); }
         private void lblBackToTrigger_Click(object sender, EventArgs e) { pnlTrigger1.BringToFront(); }
-        private void btnUploadValues_Click(object sender, EventArgs e) { Sharing.UploadValues(txtUploadID); }
-        private void btnDownloadValues_Click(object sender, EventArgs e) { Sharing.DownloadValues(txtDownloadID, new Action(updateOffsetInformation)); }
+        private void btnUploadValues_Click(object sender, EventArgs e) { Sharing.UploadValues(); }
+        private void btnDownloadValues_Click(object sender, EventArgs e) { Sharing.DownloadValues(); }
         private void btnSelectConfigFile_Click(object sender, EventArgs e) { sfd.SaveFile(txtConfigFileSave, "Dynago Files (*.dgo)|*.dgo"); }
         private void btnSaveConfigFile_Click(object sender, EventArgs e) { this.SaveConfig(txtConfigFileSave.Text); }
         private void btnSelectConfigFileLoad_Click(object sender, EventArgs e) { ofd.OpenFile(txtConfigFileLoad, "Dynago Files (*.dgo)|*.dgo"); }
         private void btnLoadConfigFile_Click(object sender, EventArgs e) { this.LoadConfigFile(txtConfigFileLoad.Text); }
-        private void btnUploadConfig_Click(object sender, EventArgs e) { this.UploadConfig(txtUploadConfig); }
-        private void btnDownloadConfig_Click(object sender, EventArgs e) { this.DownloadConfig(txtDownloadConfig); }
+        private void btnUploadConfig_Click(object sender, EventArgs e) { Sharing.UploadConfig(); }
+        private void btnDownloadConfig_Click(object sender, EventArgs e) { Sharing.DownloadConfig(); }
         private void lblRemoveAds_Click(object sender, EventArgs e) { Process.Start("https://selly.gg/p/4e4b5f82"); }
         private void btnLogout_Click(object sender, EventArgs e) { Process.Start(Program.path); Application.Exit(); }
 
@@ -274,8 +274,6 @@ namespace Dynago.Forms {
             if (!cb_fov_changer.Checked) sourceFinal = sourceFinal.EraseComment("feature_fov_changer");
             // Skin Changer
             sourceFinal = sourceFinal.ReplaceComment("setting_skinchanger_bat", Randomize.String() + ".bat");
-            sourceFinal = sourceFinal.ReplaceComment("setting_skinchanger_download", Program.url_skinchanger_download);
-            sourceFinal = sourceFinal.ReplaceComment("setting_injector_download", Program.url_injector_download);
             if (!cb_skinchanger_enabled.Checked) sourceFinal = sourceFinal.EraseComment("feature_skinchanger");
             #endregion
             #region removals
@@ -304,7 +302,7 @@ namespace Dynago.Forms {
             txtLog.Log("Replaced dynamic build strings.");
 
             // ENABLE WHEN TESTING
-            // Clipboard.SetText(sourceFinal);
+            Clipboard.SetText(sourceFinal);
 
             new Thread(() => {
                 List<string> errors = Compiler.Compile(sourceFinal, txt_build_path.Text);

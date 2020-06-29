@@ -38,8 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnCreateAnAccount = new System.Windows.Forms.Button();
-            this.lblPoweredBy = new System.Windows.Forms.Label();
-            this.lblJustinOOO = new System.Windows.Forms.Label();
+            this.githubLink = new System.Windows.Forms.Label();
             this.pnlLogin = new System.Windows.Forms.Panel();
             this.tabLogin = new System.Windows.Forms.Panel();
             this.lblLogin = new System.Windows.Forms.Label();
@@ -175,28 +174,17 @@
             this.btnCreateAnAccount.UseVisualStyleBackColor = false;
             this.btnCreateAnAccount.Click += new System.EventHandler(this.btnCreateAnAccount_Click);
             // 
-            // lblPoweredBy
+            // githubLink
             // 
-            this.lblPoweredBy.AutoSize = true;
-            this.lblPoweredBy.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPoweredBy.ForeColor = System.Drawing.Color.White;
-            this.lblPoweredBy.Location = new System.Drawing.Point(148, 278);
-            this.lblPoweredBy.Name = "lblPoweredBy";
-            this.lblPoweredBy.Size = new System.Drawing.Size(67, 13);
-            this.lblPoweredBy.TabIndex = 5;
-            this.lblPoweredBy.Text = "Powered by";
-            // 
-            // lblJustinOOO
-            // 
-            this.lblJustinOOO.AutoSize = true;
-            this.lblJustinOOO.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJustinOOO.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.lblJustinOOO.Location = new System.Drawing.Point(214, 278);
-            this.lblJustinOOO.Name = "lblJustinOOO";
-            this.lblJustinOOO.Size = new System.Drawing.Size(91, 13);
-            this.lblJustinOOO.TabIndex = 4;
-            this.lblJustinOOO.Text = "www.justin.ooo";
-            this.lblJustinOOO.Click += new System.EventHandler(this.lblJustinOOO_Click);
+            this.githubLink.AutoSize = true;
+            this.githubLink.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.githubLink.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.githubLink.Location = new System.Drawing.Point(152, 278);
+            this.githubLink.Name = "githubLink";
+            this.githubLink.Size = new System.Drawing.Size(127, 13);
+            this.githubLink.TabIndex = 4;
+            this.githubLink.Text = "github.com/Me-re-ly/";
+            this.githubLink.Click += new System.EventHandler(this.githubLink_Click);
             // 
             // pnlLogin
             // 
@@ -282,8 +270,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.ClientSize = new System.Drawing.Size(452, 298);
-            this.Controls.Add(this.lblPoweredBy);
-            this.Controls.Add(this.lblJustinOOO);
+            this.Controls.Add(this.githubLink);
             this.Controls.Add(this.pnlLogin);
             this.Controls.Add(this.pnlChangelog);
             this.Controls.Add(this.tabChangelog);
@@ -321,8 +308,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnCreateAnAccount;
-        private System.Windows.Forms.Label lblPoweredBy;
-        private System.Windows.Forms.Label lblJustinOOO;
+        private System.Windows.Forms.Label githubLink;
         private System.Windows.Forms.Panel pnlLogin;
         private System.Windows.Forms.Panel tabLogin;
         private System.Windows.Forms.Label lblLogin;

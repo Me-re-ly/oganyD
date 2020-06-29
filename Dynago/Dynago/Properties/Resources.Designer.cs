@@ -69,11 +69,11 @@ namespace Dynago.Properties {
         ///        /*junk_method*/
         ///
         ///        /*order-*/
-        ///        public struct /*rnd*/str_Vector3/*rnd*/  {
+        ///        public struct /*rnd*/Vector3/*rnd*/  {
         ///            /*order-start*/
-        ///            /*order-*/public float /*rnd*/var_Xc/*rnd*/;/*order-*/
-        ///            /*order-*/public float /*rnd*/var_Yc/*rnd*/;/*order-*/
-        ///            /*order-*/public float /*rnd*/var_Zc/*rnd*/;/*order-*/
+        ///            /*order-*/public float /*rnd*/Xc/*rnd*/;/*order-*/
+        ///            /*order-*/public float /*rnd*/Yc/*rnd*/;/*order-*/
+        ///            /*order-*/public float /*rnd*/Zc/*rnd*/;/*order-*/
         ///            /*order-end*/
         ///        }
         ///        /*order-*/
@@ -131,9 +131,9 @@ namespace Dynago.Properties {
         ///    {
         ///        /*junk_method*/
         ///        /*order-start*/
-        ///        /*order-*/public static int /*rnd*/var_offset_LocalPlayer/*rnd*/ = /*number*//*offset_LocalPlayer*/0xA9ADEC/*offset_LocalPlayer*//*number*/;/*order-*/
-        ///        /*order-*/public static int /*rnd*/var_offset_Health/*rnd*/ = /*number*//*offset_Health*/0xFC/*offset_Health*//*number*/;/*order-*/
-        ///        /*order-*/public static int /*rnd*/var_offset_Team/*rnd*/ = /*number*/ [rest of string was truncated]&quot;;.
+        ///        /*order-*/public static int /*rnd*/offset_LocalPlayer/*rnd*/ = /*number*//*offset_LocalPlayer*/0xA9ADEC/*offset_LocalPlayer*//*number*/;/*order-*/
+        ///        /*order-*/public static int /*rnd*/offset_Health/*rnd*/ = /*number*//*offset_Health*/0xFC/*offset_Health*//*number*/;/*order-*/
+        ///        /*order-*/public static int /*rnd*/offset_Team/*rnd*/ = /*number*/ [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Offsets {
             get {
@@ -155,9 +155,9 @@ namespace Dynago.Properties {
         ///        public static extern short GetAsyncKeyState(int var_Key);
         ///        /*junk_method*/
         ///        public static int
-        ///            /*rnd*/var_LocalPlayer/*rnd*/ = 0,
-        ///            /*rnd*/var_LocalPlayer_Team/*rnd*/  = 0,
-        ///            /*rnd*/var_LocalPlayer_Health/*rnd*/  = [rest of string was truncated]&quot;;.
+        ///            /*rnd*/LocalPlayer/*rnd*/ = 0,
+        ///            /*rnd*/LocalPlayer_Team/*rnd*/  = 0,
+        ///            /*rnd*/LocalPlayer_Health/*rnd*/  = [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Program {
             get {

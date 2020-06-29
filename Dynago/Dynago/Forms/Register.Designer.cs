@@ -37,7 +37,6 @@
             this.txtPassword2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lblJustinOOO = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btrnHaveAnAccount
@@ -142,23 +141,12 @@
             this.lblJustinOOO.AutoSize = true;
             this.lblJustinOOO.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJustinOOO.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.lblJustinOOO.Location = new System.Drawing.Point(218, 182);
+            this.lblJustinOOO.Location = new System.Drawing.Point(169, 182);
             this.lblJustinOOO.Name = "lblJustinOOO";
             this.lblJustinOOO.Size = new System.Drawing.Size(127, 13);
             this.lblJustinOOO.TabIndex = 5;
             this.lblJustinOOO.Text = "github.com/Me-re-ly/";
-            this.lblJustinOOO.Click += new System.EventHandler(this.lblJustinOOO_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(152, 182);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Powered by";
+            this.lblJustinOOO.Click += new System.EventHandler(this.githubLink_Click);
             // 
             // Register
             // 
@@ -168,7 +156,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.ClientSize = new System.Drawing.Size(453, 204);
             this.Controls.Add(this.lblJustinOOO);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtPassword2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btrnHaveAnAccount);
@@ -199,6 +186,5 @@
         private System.Windows.Forms.TextBox txtPassword2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblJustinOOO;
-        private System.Windows.Forms.Label label4;
     }
 }

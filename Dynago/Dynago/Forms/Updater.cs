@@ -15,7 +15,7 @@ using System.Windows.Forms;
 namespace Dynago.Forms {
     public partial class Updater : Form {
 
-        private void lblJustinOOO_Click(object sender, EventArgs e) { System.Diagnostics.Process.Start("https://justin.ooo/"); }
+        private void githubLink_Click(object sender, EventArgs e) { System.Diagnostics.Process.Start("https://github.com/Me-re-ly/oganyD/"); }
         private void Updater_FormClosing(object sender, FormClosingEventArgs e) { Application.Exit(); }
 
         public Updater(string url) {
@@ -59,6 +59,5 @@ namespace Dynago.Forms {
                 }
             }).Start();
         }
-
     }
 }

@@ -31,10 +31,7 @@ namespace Dynago.Forms
             Close();
         }
 
-        private void lblJustinOOO_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://github.com/Me-re-ly/oganyD/");
-        }
+        private void githubLink_Click(object sender, EventArgs e) { System.Diagnostics.Process.Start("https://github.com/Me-re-ly/oganyD/"); }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {

@@ -542,22 +542,22 @@ public class WeaponSettings {
 
 static class Sharing {
 
-    public static void UploadValues(TextBox txt) {
+    public static void UploadValues() {
         MessageBox.Show("Uploading values has been disabled.", "Dynago", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         return;
     }
 
-    public static void DownloadValues(TextBox txt, Action update) {
+    public static void DownloadValues() {
         MessageBox.Show("Downloading values has been disabled.", "Dynago", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         return;
     }
 
-    public static void UploadConfig(this Main f, TextBox txt) {
+    public static void UploadConfig() {
         MessageBox.Show("Uploading configs has been disabled.", "Dynago", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         return;
     }
 
-    public static void DownloadConfig(this Main f, TextBox txt) {
+    public static void DownloadConfig() {
         MessageBox.Show("Downloading configs has been disabled.", "Dynago", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         return;
     }
